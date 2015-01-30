@@ -1,5 +1,5 @@
 
-print("The cliffs of value")
+print("The Cliffs of Value")
 
 // operators
 
