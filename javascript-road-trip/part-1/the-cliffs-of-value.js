@@ -3,7 +3,7 @@ print("The Cliffs of Value")
 
 // operators
 
-var addition = 6 + 4;
+var addition = 6 + 4
 var subtraction =  9 - 5
 
 var multiplication = 3 * 4
