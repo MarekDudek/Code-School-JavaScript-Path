@@ -106,3 +106,41 @@ for (var currentGen = 1; currentGen <= totalGen; currentGen++) {
 		console.log('Generator #' + currentGen + ' is off.');
 	}
 }
+
+// Built-In's Bluff
+
+// alert('My alert');
+
+//var answer = confirm('Really?');
+//console.log('Answer is ' + answer);
+
+console.log('###########################################################################3#');
+
+//var input = prompt('Input');
+//if (input == null) {
+//	console.log('User refused to answer');
+//} else {
+//	console.log('User answered "' + input + '"');
+//}
+
+typeof(null);
+typeof null;
+
+//var userAge = prompt("What's your age, user?");
+//var ageIsCorrect = confirm('You entered ' + userAge + '. Is this correct?');
+
+// Built-In's Bluff chalange 4
+
+console.log('###########################################################################3#');
+
+var userAge = prompt("What's your age, user?");
+var ageIsCorrect = false;
+
+while (ageIsCorrect == false) {
+	ageIsCorrect = confirm('You entered ' + userAge + '. Is this correct?');
+	if (ageIsCorrect) {
+		alert('Great! Your age is logged as ' + userAge + '.');
+	} else {
+		var userAge = prompt("What's your age, user?");
+	}
+}
