@@ -59,3 +59,16 @@ var lighthouseRock = {
 	ranger2: {name: "Drew Barontini", skillz: "uppercut launch", station: 3},
 	ranger3: {name: "Christine Wong", skillz: "bomb defusing", station: 1}
 };
+
+function dontPanic(location) {
+	var list = '';
+	for (var i = 0; i < location.numRangers; i++) {
+		var ranger = location['ranger'+(i+1)].name;
+		var bulb = location.weaponBulbs[i][0];
+		console.log(ranger + ' ' + bulb);
+		list += '' + ranger + ', man the ' + bulb + '!\n';
+	}
+	alert('Avast, me hearties!\nThere be Pirates nearby! Stations!\n' + list);
+}
+
+dontPanic(lighthouseRock);
