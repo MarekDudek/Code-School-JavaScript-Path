@@ -14,3 +14,4 @@ rhino javascript-road-trip/part-2/the-array-archipelago.js
 rhino javascript-road-trip/part-3/forest-of-function-expressions.js
 rhino javascript-road-trip/part-3/hoisting-hills.js
 rhino javascript-road-trip/part-3/ocean-of-objects.js
+rhino javascript-road-trip/part-3/plains-of-prototypes.js
