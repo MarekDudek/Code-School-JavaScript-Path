@@ -64,6 +64,33 @@ function warningMaker( obstacle ) {
 	};
 }
 
-giantIceBatWarningMaker(1, 'Blizzard Beach');
-giantIceBatWarningMaker(2, 'Ice Caves');
-giantIceBatWarningMaker(20, 'Frozen Falls');
+//giantIceBatWarningMaker(1, 'Blizzard Beach');
+//giantIceBatWarningMaker(2, 'Ice Caves');
+//giantIceBatWarningMaker(20, 'Frozen Falls');
+
+
+// Dangers at the Moment of Closure
+
+/*
+ * Closures bind values at the very last moment!!!
+ */
+
+
+// Final Closed Values II challenge
+
+var listOfSharks = ["Sea Pain", "Great Wheezy", "DJ Chewie", "Lil' Bitey", "Finmaster Flex", "Swim Khalifa", "Ice Teeth", "The Notorious J.A.W."];
+var listOfTargets = ["icicle bat", "snow yeti", "killer penguin", "frost tiger", "polar bear", "iceberg", "blue witch", "wooly mammoth"];
+
+function makeTargetAssigner( sharks, targets ) {
+
+	return function(shark) {
+		for (var i=0; i<sharks.length; i++) {
+			if (shark == sharks[i]) {
+				alert("What up, " + shark + "!\nThere've been " + targets[i] + " sightings in our 'hood!\nTime for a swim-by lasering, homie!");
+			}
+		}
+	};
+}
+
+var getTargetFor = makeTargetAssigner(  listOfSharks, listOfTargets );
+getTargetFor("Ice Teeth");
