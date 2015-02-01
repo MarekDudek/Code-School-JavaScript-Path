@@ -29,3 +29,13 @@ var compute = function(computation, a, b) {
 
 var result = compute(diff2, 9, 5);
 print(result);
+
+
+// Passing function expressions
+
+var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var results = numbers.map( function(n) { return n*n; } );
+print(results);
+
+
+// Returned Functions and Immediate Invocation
