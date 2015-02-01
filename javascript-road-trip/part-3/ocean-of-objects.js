@@ -72,3 +72,5 @@ function dontPanic(location) {
 }
 
 dontPanic(lighthouseRock);
+
+// Functionality In Objects
