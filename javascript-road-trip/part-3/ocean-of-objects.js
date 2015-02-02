@@ -65,10 +65,10 @@ function dontPanic(location) {
 	for (var i = 0; i < location.numRangers; i++) {
 		var ranger = location['ranger'+(i+1)].name;
 		var bulb = location.weaponBulbs[i][0];
-		console.log(ranger + ' ' + bulb);
+		print$(ranger + ' ' + bulb);
 		list += '' + ranger + ', man the ' + bulb + '!\n';
 	}
-	alert('Avast, me hearties!\nThere be Pirates nearby! Stations!\n' + list);
+	//alert('Avast, me hearties!\nThere be Pirates nearby! Stations!\n' + list);
 }
 
 dontPanic(lighthouseRock);
