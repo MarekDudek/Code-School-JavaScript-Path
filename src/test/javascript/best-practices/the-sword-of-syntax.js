@@ -10,5 +10,34 @@ describe('The Sword of Syntax ...', function () {
 
             expect(weapon).toBe('Longsword');
         });
+
+        it('can invoke action', function () {
+
+            (true || false) ? console.log('True') : console.log('False')
+        });
+
+        it('can pick immediately-invoked function', function () {
+
+            (true || false) ?
+                function () {
+                    console.log('True')
+                }() :
+                function () {
+                    console.log('False')
+                }();
+        });
+
+        it('can execute multiple actions', function() {
+
+            var weapon, helmet;
+
+            (true || false) ?
+                (weapon = 'Excalibur', helmet = 'Goosewhite')
+                :
+                (weapon = 'Longsword', helmet = 'Iron Helm');
+
+            expect(weapon).toBe('Excalibur');
+            expect(helmet).toBe('Goosewhite');
+        });
     });
 });
