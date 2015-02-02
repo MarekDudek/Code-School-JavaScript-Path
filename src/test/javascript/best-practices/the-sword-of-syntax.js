@@ -1,5 +1,9 @@
 describe('The Sword of Syntax ...', function () {
 
+    function someAction(value) {
+
+    }
+
     describe('Ternary conditional', function () {
 
         it('is far shorter', function () {
@@ -13,17 +17,17 @@ describe('The Sword of Syntax ...', function () {
 
         it('can invoke action', function () {
 
-            (true || false) ? console.log('True') : console.log('False')
+            (true || false) ? someAction('True') : someAction('False')
         });
 
         it('can pick immediately-invoked function', function () {
 
             (true || false) ?
                 function () {
-                    console.log('True')
+                    someAction('True')
                 }() :
                 function () {
-                    console.log('False')
+                    someAction('False')
                 }();
         });
 
