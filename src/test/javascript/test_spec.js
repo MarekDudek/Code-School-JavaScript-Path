@@ -1,7 +1,7 @@
 
-describe('Declaring variables',function() {
+describe('Testing JavaScript ...',function() {
 
-    it('is possible', function() {
+    it('... is possible', function() {
         var variable = 3;
         expect(variable).toBe(3);
     });
