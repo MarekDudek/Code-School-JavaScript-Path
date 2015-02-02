@@ -61,3 +61,34 @@ for (var i=0; i<forestCows.length; i++) {
 }
 
 print$(forestCows.countForBreeding());
+
+
+// Inheritance and constructors
+
+var shoe = {size: 6, gender: 'women', construction: 'slipper'};
+var magicShoe = Object.create(shoe);
+
+print$(Object.prototype.isPrototypeOf(shoe));
+print$(Object.prototype.isPrototypeOf(magicShoe));
+
+print$(shoe.isPrototypeOf(magicShoe));
+print$(magicShoe.isPrototypeOf(shoe));
+
+
+function Shoe(shoeSize, shoeColor, forGender, constructStyle) {
+	this.size = shoeSize;
+	this.color = shoeColor;
+	this.gender = forGender;
+	this.construction = constructStyle;
+}
+
+Shoe.prototype = {
+	putOn   : function() { print$("Your " + this.construction + "'s on!"); },
+	takeOff : function() { print$("Uh, what's that smell?"); } 
+};
+
+var beachShoe = new Shoe(10, 'blue', 'women', 'flipflop');
+print$(beachShoe);
+
+beachShoe.putOn();
+beachShoe.takeOff();
