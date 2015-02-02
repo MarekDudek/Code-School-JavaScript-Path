@@ -92,3 +92,29 @@ print$(beachShoe);
 
 beachShoe.putOn();
 beachShoe.takeOff();
+
+var isTrue  = (4 ==  '4');
+var isFalse = (4 === '4')
+print('true: '  + isTrue);
+print('false: ' + isFalse);
+
+var Tornado = function(category, affectedAreas, windGust) {
+	this.category = category;
+	this.affectedAreas = affectedAreas;
+	this.windGust = windGust;
+}
+
+var cities = [[ 'Kansas City', 46310], ['Topeka', 127939], ['Lenexa', 49398]];
+var twister = new Tornado("F5", cities, 220);
+
+Tornado.prototype.valueOf = function() {
+	var sum = 0;
+	for (var i=0; i< this.affectedAreas.length; i++) {
+		sum += this.affectedAreas[i][1];
+	}
+	return sum;
+}
+print$(twister.valueOf());
+
+Tornado.prototype.toString = Tornado.prototype.valueOf;
+print$(twister);
