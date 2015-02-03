@@ -44,4 +44,36 @@ describe('The Sword of Syntax ...', function () {
             expect(helmet).toBe('Goosewhite');
         });
     });
+
+    describe('Logical Assignment I: The "OR" operator', function() {
+
+        it('can be used to initialize non-existing objects', function() {
+
+            var swords = undefined;
+
+            swords = swords || [];
+            swords.push('Excalibur');
+
+            expect(swords).toContain('Excalibur');
+        });
+    });
+
+    describe('Logical Assignment II: The "AND" operator', function() {
+
+        it('can be used to find first falsy value', function() {
+
+            var result = undefined && 42;
+
+            expect(result).toBe(undefined);
+
+            result = 0 && ['Sweet', 'array'];
+
+            expect(result).toBe(0);
+
+            result = '' && {type:'ring', stone:'diamond'};
+
+            expect(result).toBe('');
+        });
+    });
+
 });
