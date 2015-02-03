@@ -76,4 +76,64 @@ describe('The Sword of Syntax ...', function () {
         });
     });
 
+    describe('Switch statement', function() {
+
+        it('is conditional for multiple possibilities', function() {
+
+            var regiment = undefined;
+            var weapon;
+
+            switch (regiment) {
+                case 1:
+                    weapon = 'Broadsword';
+                    break;
+                case 2:
+                    weapon = 'Claymore';
+                    break;
+                default :
+                    weapon = 'Mace';
+            }
+
+            expect(weapon).toBe('Mace');
+        });
+
+        it('can effectively use fall-through', function() {
+
+            var regiment = 4;
+            var weapon;
+
+            switch (regiment) {
+                case 1:
+                case 2:
+                    weapon = 'Broadsword';
+                    break;
+                case 3:
+                case 4:
+                case 5:
+                    weapon = 'Claymore';
+                    break;
+                default :
+                    weapon = 'Mace';
+            }
+
+            expect(weapon).toBe('Claymore');
+        });
+
+        it('fall-through is useful for hierarchical code execution', function() {
+
+            var rank = 'Captain';
+
+            var dagger = {
+                length: 8
+            };
+
+            switch (rank) {
+                case 'King': dagger.diamonds = 1;
+                case 'Captain' : dagger.amethyst = 2;
+                case 'Knight': dagger.rubies = 4;
+            }
+
+            expect(dagger.amethyst).toBeDefined();
+        });
+    });
 });
