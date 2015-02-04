@@ -1,4 +1,4 @@
-describe('The Sword of Syntax ...', function () {
+describe('The Sword of Syntax', function () {
 
     function someAction(value) {
 
