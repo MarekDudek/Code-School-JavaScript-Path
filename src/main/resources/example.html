@@ -9,12 +9,32 @@
 <body>
     <h1>Where do you want to go?</h1>
     <p>Plan your next adventure.</p>
+    <ul id="destinations">
+        <li>one</li>
+        <li>two</li>
+        <li class='special'>three</li>
+    </ul>
 </body>
     <script type="text/javascript">
+
         $(document).ready(function () {
             var text = $('h1').text();
-            console.log(text);
             $('h1').text(text + ' Decide!')
         });
+
+        $(document).ready(function () {
+            var items = $('li');
+            items.text('The same text for all elements');
+        });
+
+        $(document).ready(function () {
+            var elementById = $('#destination');
+        });
+
+        $(document).ready(function () {
+            var elementByClass = $('.special');
+            elementByClass.text('This one is special');
+        });
+
     </script>
 </html>
