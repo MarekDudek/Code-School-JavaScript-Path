@@ -5,6 +5,23 @@
     <meta charset="UTF-8">
     <title>jQuery Adventures</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <style type="text/css">
+        .red {
+            color: red;
+        }
+        .blue {
+            color: blue;
+        }
+        .yellow {
+            background-color: yellow;
+        }
+        .italic {
+            font-style: italic;
+        }
+        .bold {
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <h1>Where do you want to go?</h1>
@@ -12,6 +29,12 @@
     <ul id="destinations">
         <li>one</li>
         <li>two</li>
+        <li>
+            <ul>
+                <li>nested</li>
+                <li class="inside">nested</li>
+            </ul>
+        </li>
         <li class='special'>three</li>
     </ul>
 </body>
@@ -19,21 +42,23 @@
 
         $(document).ready(function () {
             var text = $('h1').text();
-            $('h1').text(text + ' Decide!')
-        });
+            $('h1').text(text + ' Decide!');
 
-        $(document).ready(function () {
-            var items = $('li');
-            items.text('The same text for all elements');
-        });
+            $('li').addClass('red');
 
-        $(document).ready(function () {
-            var elementById = $('#destination');
-        });
+            $('#destinations').addClass('yellow');
 
-        $(document).ready(function () {
-            var elementByClass = $('.special');
-            elementByClass.text('This one is special');
+            $('.special').text('This one is special');
+
+            $('#destinations > li').addClass('blue');
+
+            $('.inside, .special').addClass('italic');
+
+            var first = $('#destinations li:first');
+            first.addClass('bold');
+            var last = $('#destinations li:last');
+            last.addClass('bold');
+
         });
 
     </script>
