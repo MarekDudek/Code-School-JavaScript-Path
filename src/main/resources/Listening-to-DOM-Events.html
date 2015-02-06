@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Listening to DOM Events</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <style>
+        .ticket {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<h1>Listening to DOM Events</h1>
+
+<div class='confirmation'>
+    <h2>Confirmation</h2>
+    <button>Details</button>
+    <ul class='ticket'>
+        <li>Some details</li>
+    </ul>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.confirmation').on('click', 'button', function () {
+            $(this).closest('.confirmation').find('.ticket').slideToggle();
+        });
+        $('.confirmation').on('mouseenter', 'h2', function () {
+            $(this).closest('.confirmation').find('.ticket').slideDown();
+        });
+    });
+</script>
+</body>
+</html>
