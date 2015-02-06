@@ -40,6 +40,14 @@
     <div>
         <button>Get Price</button>
     </div>
+
+    <div>
+        <h2 class='confirmation'>Confirmation</h2>
+        <button>Show details</button>
+        <ul class='ticket'>
+            <li>Some details</li>
+        </ul>
+    </div>
 </body>
     <script type="text/javascript">
 
@@ -75,6 +83,10 @@
                 $('div').append(price);
 
                 $('button').remove();
+            });
+
+            $('confirmation').on('click', 'button', function() {
+               alert('yes');
             });
         });
 
