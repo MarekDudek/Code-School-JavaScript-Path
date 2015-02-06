@@ -37,6 +37,9 @@
         </li>
         <li class='special'>three</li>
     </ul>
+    <div>
+        <button>Get Price</button>
+    </div>
 </body>
     <script type="text/javascript">
 
@@ -59,6 +62,20 @@
             var last = $('#destinations li:last');
             last.addClass('bold');
 
+            $('li').first().addClass('italic');
+            $('li').first().next().addClass('italic');
+            $('li').first().parent().addClass('red');
+
+            // traversing
+            $('#destinations').find('li');
+            $('#destinations').children('li').addClass('bold');
+
+            $('button').on('click', function() {
+                var price = $('<p>From $399.99</p>');
+                $('div').append(price);
+
+                $('button').remove();
+            });
         });
 
     </script>
