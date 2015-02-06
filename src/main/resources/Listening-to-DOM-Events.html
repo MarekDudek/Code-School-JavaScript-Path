@@ -26,6 +26,9 @@
         $('.confirmation').on('click', 'button', function () {
             $(this).closest('.confirmation').find('.ticket').slideToggle();
         });
+        $('.confirmation').on('mouseenter', 'h2', function () {
+            $(this).closest('.confirmation').find('.ticket').slideDown();
+        });
     });
 </script>
 </body>
